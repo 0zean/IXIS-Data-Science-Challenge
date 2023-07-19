@@ -13,8 +13,8 @@ session_counts <- session_counts %>%
 summary(session_counts)
 
 # Clean session_counts data
-session_counts <- session_counts %>%
-    filter(browser != "error" & browser != "(not set)")
+# session_counts <- session_counts %>%
+#     filter(browser != "error" & browser != "(not set)")
 
 # Convert date column to proper date format
 session_counts$dim_date <- as.Date(session_counts$dim_date, format = "%m/%d/%y")
